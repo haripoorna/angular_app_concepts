@@ -1,0 +1,19 @@
+<h1>
+    This is Body component</h1>
+<div class="container">
+    <div class="row well">
+        <div class="col-md-12">
+            <em><h4>This is parent to child and child parent data commmunication</h4></em>
+            <app-cockpit (serverCreated)="onServerAdded($event)" (bluePrintCreated)="onBluePrintAdded($event)"></app-cockpit>
+            <hr>
+            <app-server *ngFor="let serverElement of serverElements" [element]="serverElement"></app-server>
+        </div>
+    </div>
+    <div class="row well">
+        <div class="col-md-12">
+            <h4>This is Sibiling component commmunication</h4>
+            <button (click)="sendMessage()" class="btn btn-primary">Send Message</button>
+            <button (click)="clearMessage()" class="btn btn-danger">Clear Message</button>
+        </div>
+    </div>
+</div>

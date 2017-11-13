@@ -1,0 +1,19 @@
+<!-- <h1>This is {{headerTitle}}</h1> -->
+
+<!-- <div class="container well"></div> -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Digital Lync</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <!--  <li class="active" (click)="LoadPage('Home')"><a href="#">Home</a></li>
+      <li  (click)="LoadPage('Login')"><a href="#">Login</a></li>
+      <li  (click)="LoadPage('Register')"><a href="#">Register</a></li>-->
+            <!--  <li *ngFor="let item of Tabs" (click)="LoadPage(item)"><a href="#">{{item}}</a></li>-->
+            <li><a [routerLink]="['/home']">Home</a></li>
+            <li><a [routerLink]="['/login']">Login</a></li>
+            <li><a [routerLink]="['/registration']">Registration</a></li>
+        </ul>
+    </div>
+</nav>
