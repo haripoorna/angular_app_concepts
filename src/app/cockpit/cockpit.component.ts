@@ -25,6 +25,7 @@ export class CockpitComponent implements OnInit {
     });
   }
    onAddBluePrint(newServerNameInput: HTMLInputElement){
+     console.log(newServerNameInput)
     this.bluePrintCreated.emit({
       serverName :  newServerNameInput.value,
       // serverContent: this.newServerContent

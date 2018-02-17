@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 
 import { MessageService } from './_services/index';
 import { RegisterComponent } from './register/register.component';
+import { DummyComponent } from './dummy/dummy.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { RegisterComponent } from './register/register.component';
     ServerComponent,
     LoginComponent,
     RegisterComponent,
+    DummyComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { RegisterComponent } from './register/register.component';
       { path: '', component: BodyComponent },
       { path: 'home', component: BodyComponent },
       {path: 'login', component: LoginComponent},
-      {path: 'registration', component: RegisterComponent}
+      {path: 'registration', component: RegisterComponent},
+      {path: 'dummy', component: DummyComponent}
     ])
   ],
   providers: [MessageService],
