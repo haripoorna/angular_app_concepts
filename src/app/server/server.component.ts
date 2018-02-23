@@ -1,5 +1,7 @@
 import { Component, OnInit, Input  } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
 
+import { MessageService } from './../_services/index';
 @Component({
   selector: 'app-server',
   templateUrl: './server.component.html',
@@ -7,7 +9,11 @@ import { Component, OnInit, Input  } from '@angular/core';
 })
 export class ServerComponent implements OnInit {
   @Input() element: {type: string , name: string , content: string};
-  constructor() { }
+  message: any;
+  subscription: Subscription;
+  constructor(private messageService: MessageService) { 
+    //this.subscription = this.messageService.getMessage().subscribe(message => { this.message = message; });
+  }
 
   ngOnInit() {
   }
